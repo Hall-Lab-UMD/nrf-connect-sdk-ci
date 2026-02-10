@@ -36,7 +36,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/Hall-Lab-UMD/nrf-connect-sdk-ci
+          images: ghcr.io/hall-lab-umd/nrf-connect-sdk-ci
         
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
