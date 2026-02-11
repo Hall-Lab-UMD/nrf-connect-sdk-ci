@@ -18,14 +18,4 @@ inputs:
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/hall-lab-umd/nrf-connect-sdk-ci:v3.2.1'
-  args:
-    - west 
-    - build
-    - --build-dir 
-    - ${{ inputs.build_dir }}
-    - .
-    - --pristine
-    - --board 
-    - ${{ inputs.board }}
-    - ${{ inputs.add_flags }}
     
