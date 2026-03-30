@@ -21,6 +21,21 @@ jobs:
 
 ```
 
+### Building with a custom board
+
+If your repository defines a custom board under `boards/<vendor>/<board>/`,
+pass the workspace root as `board_root` so the SDK can find it:
+
+```yml
+    - name: Build with custom board
+      uses: embedd-actions/nrf-connect-sdk-ci@v3.2.1
+      with:
+        board: my_custom_board
+        build_dir: build
+        board_root: ${{ github.workspace }}
+
+```
+
 ## How to specify a version of NRF Connect SDK
 
 To select the specific version of  NRF Connect SDK you
