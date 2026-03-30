@@ -15,6 +15,10 @@ inputs:
     description: 'Additional flags'
     required: true
     default: '--no-sysbuild'
+  board_root:
+    description: 'Path to the root directory containing a boards/ sub-directory with custom board definitions (e.g. the workspace root when boards live under boards/<vendor>/<board>). Leave empty to use only the SDK built-in boards.'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/hall-lab-umd/nrf-connect-sdk-ci:v3.2.1'
